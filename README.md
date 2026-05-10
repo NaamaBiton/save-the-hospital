@@ -18,6 +18,7 @@ A simulated cybersecurity incident response scenario. A hospital's network was b
 Analyzed the encryption scheme and identified it as a **Vigenère cipher**. Used the `keys` file to reverse the encryption and recover the plaintext.
 
 **Results:**
+
 - Successfully decrypted 3 of 5 files
 - Extracted **129 unique patient email addresses** from the recovered data
 - Validated emails against known domains (gmail, yahoo, hotmail) and deduplicated
@@ -29,6 +30,7 @@ Analyzed the encryption scheme and identified it as a **Vigenère cipher**. Used
 Analyzed Windows process log files to detect malicious activity. The script cross-references running processes against a baseline of known-good processes and flags any process consuming **>50 KB more memory than its normal baseline** — a common indicator of process injection.
 
 **Suspicious processes identified:**
+
 ```
 services.exe  |  explorer.exe  |  iexplore.exe  |  rundll32.exe
 ```
@@ -38,6 +40,7 @@ These are legitimate Windows processes that had been **hijacked by the Flame mal
 **Malware identified: Flame**
 
 Flame is a sophisticated espionage toolkit that:
+
 - Injects code fragments across multiple threads, hiding behind legitimate processes
 - Steals files, captures screenshots, logs keystrokes
 - Spreads via Wi-Fi, Bluetooth, and USB
